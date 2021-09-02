@@ -9,8 +9,8 @@ resource "google_container_cluster" "primary" {
   remove_default_node_pool = true
   initial_node_count       = 1
 
-  network    = google_compute_network.vpc.name
-  subnetwork = google_compute_subnetwork.subnet.name
+  network    = var.vpc_name
+  subnetwork = var.subnet_name
 }
 
 # Separately Managed Node Pool
