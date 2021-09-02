@@ -36,6 +36,16 @@
 ehthumbs.db
 Thumbs.db
 
-# terraform files
-######################
-.terraform.*
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
