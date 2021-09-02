@@ -11,6 +11,10 @@ variable "gke_num_nodes" {
   description = "number of gke nodes"
 }
 
+variable "app_name" {
+  description = "name of the application"
+}
+
 #variable "vpc-name" {
 #  description = "name of the vpc the cluster will run"
 #}
