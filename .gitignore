@@ -51,4 +51,4 @@ crash.log
 terraform.rc
 
 # Other .terraform files such as lock files
-.terraform
+.terraform.*
