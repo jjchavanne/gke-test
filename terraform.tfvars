@@ -1,5 +1,5 @@
 project_id  = "panwlabs-prisma-cloud"
-region      = "us-central1"
+region      = "us-east1"
 app_name    = "microseg-john"
-vpc_name    = "panwlabs-prisma-cloud"
-subnet_name = "panwlabs-prisma-cloud"
+#vpc_name    = "panwlabs-prisma-cloud"
+#subnet_name = "panwlabs-prisma-cloud"
