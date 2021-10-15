@@ -1,7 +1,7 @@
 # Using a single workspace:
 terraform {
   backend "gcs" {
-    bucket  = "panwlabs-pc-tfstate"
+    bucket  = var.bucket
     prefix  = "terraform/state"
   }
 }

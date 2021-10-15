@@ -3,7 +3,11 @@ variable "project_id" {
 }
 
 variable "region" {
-  description = "region"
+  description = "compute region"
+}
+
+variable "zone" {
+  description = "compute zone"
 }
 
 variable "gke_num_nodes" {
@@ -11,7 +15,7 @@ variable "gke_num_nodes" {
   description = "number of gke nodes"
 }
 
-variable "app_name" {
+variable "cluster_name" {
   description = "name of the application"
 }
 

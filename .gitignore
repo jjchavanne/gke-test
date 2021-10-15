@@ -52,3 +52,7 @@ terraform.rc
 
 # Other .terraform files such as lock files
 .terraform.*
+
+# Other files
+.txt
+.sha*
