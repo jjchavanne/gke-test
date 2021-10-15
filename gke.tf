@@ -24,7 +24,25 @@ resource "google_container_cluster" "primary" {
       disabled = false
     }
   }
+  enable_intranode_visibility = true
+  enable_shielded_nodes = true
+  min_master_version = "1.12"
+  enable_binary_authorization = true
+  node_config {
+    shielded_instance_config {
+      enable_secure_boot = true
+    }
+    workload_metadata_config {
+      node_metadata = "GKE_METADATA_SERVER"
+    }
+  }
 }
+
+
+
+
+
+
 
 # Separately Managed Node Pool
 resource "google_container_node_pool" "primary_nodes" {
@@ -41,6 +59,12 @@ resource "google_container_node_pool" "primary_nodes" {
   }
 
   node_config {
+    workload_metadata_config {
+      node_metadata = "GKE_METADATA_SERVER"
+    }
+    shielded_instance_config {
+      enable_secure_boot = true
+    }
     service_account = "gke-sa@panwlabs-prisma-cloud.iam.gserviceaccount.com"
     oauth_scopes = [
       "https://www.googleapis.com/auth/logging.write",
@@ -60,3 +84,5 @@ resource "google_container_node_pool" "primary_nodes" {
     }
   }
 }
+
+
