@@ -55,4 +55,4 @@ terraform.rc
 
 # Other files
 .txt
-.sha*
+.sha
