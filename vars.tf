@@ -19,7 +19,7 @@ variable "cluster_name" {
   description = "name of the application"
 }
 
-#variable "vpc-name" {
+#variable "vpc_name" {
 #  description = "name of the vpc the cluster will run"
 #}
 
