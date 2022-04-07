@@ -24,6 +24,14 @@ resource "google_container_cluster" "primary" {
       disabled = false
     }
   }
+  enable_binary_authorization = true
+  enable_intranode_visibility = true
+  enable_shielded_nodes = true
+  master_auth {
+    client_certificate_config {
+      issue_client_certificate = false
+    }
+  }
 }
 
 # Separately Managed Node Pool
